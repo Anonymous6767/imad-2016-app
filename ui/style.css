@@ -18,5 +18,11 @@ body {
 
 .img-medium {
     height: 200px;
-}
-
+} 
+.container{
+                max-width:600px;
+                margin: 2 auto;
+                color:red;
+               
+                
+            }
