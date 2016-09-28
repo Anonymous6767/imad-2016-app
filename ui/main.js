@@ -4,7 +4,7 @@ var moveright=function(){
     marginleft=marginleft+1;
     img.style.marginleft=marginleft+"px";
 };
+var img=document.getElementid("pramit");
 img.onclick=function(){
     var interval=setInterval(moveright,5);
 };
-var img=document.getElementid("pramit");
