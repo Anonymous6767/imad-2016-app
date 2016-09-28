@@ -7,3 +7,4 @@ var moveright=function(){
 img.onclick=function(){
     var interval=setInterval(moveright,5);
 };
+var img=document.getElementid("pramit");
