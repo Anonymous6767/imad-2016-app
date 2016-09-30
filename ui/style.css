@@ -26,4 +26,14 @@ body {
                 color:black;
                
                 
-            }
+}
+.cls{
+    color: blue;
+    margin: 1 auto;
+    max-width:600px;
+    font-size:2rem;
+    font-family:sans-serif;
+    background-color:blue;
+    
+    
+}
