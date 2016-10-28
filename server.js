@@ -1,7 +1,7 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
-
+var pool=require('pg').Pool;
 var app = express();
 app.use(morgan('combined'));
 
@@ -31,7 +31,11 @@ app.get('/submit-name/name', function (req, res) {
     res.send(JSON.stringify(names));
 
 });
-
+//
+app.get('/test-db',function(req,res){
+    //select
+    //make a response
+})
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
