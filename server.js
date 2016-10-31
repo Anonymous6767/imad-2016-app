@@ -100,7 +100,7 @@ app.get('/', function (req, res) {
 });
 app.get('/aticlename',function(req,res){
     var aticlename=req.params.aticlename;
-    res.send(createTemplate(aticles[aticleName]));
+    res.send(createTemplate(aticles[aticlename]));
 });
 
 var counter=0;
