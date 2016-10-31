@@ -44,7 +44,7 @@ button.onclick=function(){
    var span=doocument.getElementById('count');
                 span.innerHTML=counter.toString();
  //Make the request
- request.open("GET","http://anonymous6767.imad.hasura-app.io/",true);
- request.send(null);
+// request.open("GET","http://anonymous6767.imad.hasura-app.io/",true);
+ //request.send(null);
  
 };
