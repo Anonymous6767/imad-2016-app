@@ -3,7 +3,8 @@ var morgan = require('morgan');
 var path = require('path');
 var Pool=require('pg').Pool;
 var app = express();
-var articleone={
+var articles={
+ articleone:{
   title:' Article One | Pramit',
   heading:' Article One',
   date:'Sept 24,2016',
@@ -26,6 +27,28 @@ var articleone={
             
 .
             </p>`
+ },
+ articletwo:{
+  title:'Article two',
+  date:'Sept 24,2016',
+  heading:'Article Two',
+  content:`
+        <p>
+        This is article two
+        </p>
+        `
+      },
+     
+    articlethree:{
+        title:'article three',
+        date:'Sept 24,2016',
+        heading:'Article Three',
+        content:`<p>
+            This is article three
+            </p>`
+            
+        
+    }
   
 };
 function createTemplate(data){
@@ -44,12 +67,8 @@ var htmltemplate=`<html>
     </head>
     <body>
         <div class="container">
-          <div>
-            <a href="/">Previous</a>
-             <a href="/aticle-two">Next</a>
-            
-        </div>
-        <hr/>
+        
+        
         <div>
             <h3>
                ${heading}
