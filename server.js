@@ -93,7 +93,7 @@ var config={
     host:"db.imad.hasura-app.io",
     password:process.env.DB_PASSWORD
 };
-
+app.use(morgan('combined'));
 var pool=new Pool(config);
 app.get('/test-db',function(req,res){
     //select
@@ -108,7 +108,7 @@ app.get('/test-db',function(req,res){
     });
     
 });
-app.use(morgan('combined'));
+
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
