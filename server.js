@@ -3,7 +3,7 @@ var morgan = require('morgan');
 var path = require('path');
 var Pool=require('pg').Pool;
 var app = express();
-var articles={
+var aticles={
 ' aticle-one':{
   title:' Article One | Pramit',
   heading:' Article One',
@@ -99,7 +99,8 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 app.get('/aticlename',function(req,res){
-    res.send(createTemplate(articles[articleName]));
+    var aticlename=req.params.aticlename;
+    res.send(createTemplate(aticles[aticleName]));
 });
 
 var counter=0;
