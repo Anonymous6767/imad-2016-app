@@ -3,70 +3,7 @@ var morgan = require('morgan');
 var path = require('path');
 var Pool=require('pg').Pool;
 var app = express();
-var content={
-  title:' Article One | Pramit',
-  heading:' Article One',
-  date:'Sept 24,2016',
-  content:`    <p>
-               This is a cricket content page.I am abig fan of rahul dravid.But sachin is the bestThis is a cricket content page.I am abig fan of rahul dravid.But sachin is the bestThis is a cricket content page.I am abig fan of rahul dravid.But sachin is the bestThis is a cricket content page.I am abig fan of rahul dravid.But sachin is the bestThis is a cricket content page.I am abig fan of rahul dravid.But sachin is the bestThis is a cricket content page.I am abig fan of rahul dravid.But sachin is the best
-            
-.
-            </p>
-            </div>
-            <div>
-             <p>
-               This is a cricket content page.I am abig fan of rahul dravid.But sachin is the bestThis is a cricket content page.I am abig fan of rahul dravid.But sachin is the bestThis is a cricket content page.I am abig fan of rahul dravid.But sachin is the bestThis is a cricket content page.I am abig fan of rahul dravid.But sachin is the bestThis is a cricket content page.I am abig fan of rahul dravid.But sachin is the bestThis is a cricket content page.I am abig fan of rahul dravid.But sachin is the best
-            
-.
-            </p>
-            </div>
-            <div>
-             <p>
-               This is a cricket content page.I am abig fan of rahul dravid.But sachin is the bestThis is a cricket content page.I am abig fan of rahul dravid.But sachin is the bestThis is a cricket content page.I am abig fan of rahul dravid.But sachin is the bestThis is a cricket content page.I am abig fan of rahul dravid.But sachin is the bestThis is a cricket content page.I am abig fan of rahul dravid.But sachin is the bestThis is a cricket content page.I am abig fan of rahul dravid.But sachin is the best
-            
-.
-            </p>`
-  
-};
-function createTemplate(data){
-    var title=data.title;
-    var date=data.date;
-    var heading=data.heading;
-    var content=data.content;
-var htmltemplate=`<html>
-    <head>
-        <title>
-            ${title}
-        </title>
-        <meta name="viewport" content="width-device-width, initial-scale=1" />
-         <link href="/ui/style.css" rel="stylesheet" />
-       
-    </head>
-    <body>
-        <div class="container">
-          <div>
-            <a href="/">Previous</a>
-             <a href="/aticle-two">Next</a>
-            
-        </div>
-        <hr/>
-        <div>
-            <h3>
-               ${heading}
-            </h3>
-        </div>
-        <div>
-            ${date}
-        </div>
-        <div>
-          ${content}
-        </div>
-    </div>
-    </body>
-</html>`
-;
-return htmltemplate;
-}
+
 var config={
     user:"anonymous6767",
     database:"anonymous6767",
