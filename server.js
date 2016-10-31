@@ -100,7 +100,7 @@ app.get('/', function (req, res) {
 });
 app.get('/aticles/:aticleName',function(req,res){
     var aticleName=req.params.aticleName;
-    pool.query("SELECT * FROM article WHERE title= "+ req.params.aticleName, function(err,result){
+    pool.query("SELECT * FROM article WHERE title=  "+ req.params.aticleName , function(err,result){
        if(err){
            res.status(500).send(err.toString());
        } 
