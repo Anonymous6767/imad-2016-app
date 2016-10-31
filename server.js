@@ -98,7 +98,7 @@ app.use(morgan('combined'));
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-app.get('/aticleName',function(req,res){
+app.get('/:aticleName',function(req,res){
     var aticleName=req.params.aticleName;
     res.send(createTemplate(aticles[aticleName]));
 });
