@@ -4,7 +4,7 @@ var path = require('path');
 var Pool=require('pg').Pool;
 var app = express();
 var articles={
- articleone:{
+ articleOne:{
   title:' Article One | Pramit',
   heading:' Article One',
   date:'Sept 24,2016',
@@ -28,7 +28,7 @@ var articles={
 .
             </p>`
  },
- articletwo:{
+ articleTwo:{
   title:'Article two',
   date:'Sept 24,2016',
   heading:'Article Two',
@@ -39,7 +39,7 @@ var articles={
         `
       },
      
-    articlethree:{
+articleThree:{
         title:'article three',
         date:'Sept 24,2016',
         heading:'Article Three',
@@ -98,8 +98,8 @@ app.use(morgan('combined'));
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-app.get('/aticle-one',function(req,res){
-    res.send(createTemplate(articleone));
+app.get('/aticlename',function(req,res){
+    res.send(createTemplate(articles[articleName]));
 });
 app.get('/aticle-two',function(req,res){
      res.sendFile(path.join(__dirname, 'ui', 'aticle-two.html'));
