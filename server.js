@@ -3,7 +3,31 @@ var morgan = require('morgan');
 var path = require('path');
 var Pool=require('pg').Pool;
 var app = express();
-
+var content={
+  title:' Article One | Pramit',
+  heading:' Article One',
+  date:'Sept 24,2016',
+  content:`    <p>
+               This is a cricket content page.I am abig fan of rahul dravid.But sachin is the bestThis is a cricket content page.I am abig fan of rahul dravid.But sachin is the bestThis is a cricket content page.I am abig fan of rahul dravid.But sachin is the bestThis is a cricket content page.I am abig fan of rahul dravid.But sachin is the bestThis is a cricket content page.I am abig fan of rahul dravid.But sachin is the bestThis is a cricket content page.I am abig fan of rahul dravid.But sachin is the best
+            
+.
+            </p>
+            </div>
+            <div>
+             <p>
+               This is a cricket content page.I am abig fan of rahul dravid.But sachin is the bestThis is a cricket content page.I am abig fan of rahul dravid.But sachin is the bestThis is a cricket content page.I am abig fan of rahul dravid.But sachin is the bestThis is a cricket content page.I am abig fan of rahul dravid.But sachin is the bestThis is a cricket content page.I am abig fan of rahul dravid.But sachin is the bestThis is a cricket content page.I am abig fan of rahul dravid.But sachin is the best
+            
+.
+            </p>
+            </div>
+            <div>
+             <p>
+               This is a cricket content page.I am abig fan of rahul dravid.But sachin is the bestThis is a cricket content page.I am abig fan of rahul dravid.But sachin is the bestThis is a cricket content page.I am abig fan of rahul dravid.But sachin is the bestThis is a cricket content page.I am abig fan of rahul dravid.But sachin is the bestThis is a cricket content page.I am abig fan of rahul dravid.But sachin is the bestThis is a cricket content page.I am abig fan of rahul dravid.But sachin is the best
+            
+.
+            </p>`
+  
+};
 var config={
     user:"anonymous6767",
     database:"anonymous6767",
