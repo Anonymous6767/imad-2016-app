@@ -93,6 +93,21 @@ var config={
     host:"db.imad.hasura-app.io",
     password:process.env.DB_PASSWORD
 };
+
+var pool=new Pool(config);
+app.get('/test-db',function(req,res){
+    //select
+    //make a response
+    pool.query("SELECT * FROM test",function(err,result){
+        if(err){
+            res.status(500).send(err.toString());
+        }
+        else{
+           res.send(JSON.stringify(result.rows));  
+        }
+    });
+    
+});
 app.use(morgan('combined'));
 
 app.get('/', function (req, res) {
@@ -132,20 +147,7 @@ app.get('/submit-name/name', function (req, res) {
 
 });
 //
-var pool=new Pool(config);
-app.get('/test-db',function(req,res){
-    //select
-    //make a response
-    pool.query("SELECT * FROM test",function(err,result){
-        if(err){
-            res.status(500).send(err.toString());
-        }
-        else{
-           res.send(JSON.stringify(result.rows));  
-        }
-    })
-    
-})
+
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
