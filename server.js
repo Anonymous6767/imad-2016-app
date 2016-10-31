@@ -28,6 +28,11 @@ var content={
             </p>`
   
 };
+function createTemplate(data){
+    var title=data.title;
+    var date=data.date;
+    var heading=data.heading;
+    var content=data.content;
 var htmltemplate=`<html>
     <head>
         <title>
@@ -60,6 +65,8 @@ var htmltemplate=`<html>
     </body>
 </html>`
 ;
+return htmltemplate;
+}
 var config={
     user:"anonymous6767",
     database:"anonymous6767",
