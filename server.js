@@ -28,6 +28,38 @@ var content={
             </p>`
   
 };
+var htmltemplate=`<html>
+    <head>
+        <title>
+            ${title}
+        </title>
+        <meta name="viewport" content="width-device-width, initial-scale=1" />
+         <link href="/ui/style.css" rel="stylesheet" />
+       
+    </head>
+    <body>
+        <div class="container">
+          <div>
+            <a href="/">Previous</a>
+             <a href="/aticle-two">Next</a>
+            
+        </div>
+        <hr/>
+        <div>
+            <h3>
+               ${heading}
+            </h3>
+        </div>
+        <div>
+            ${date}
+        </div>
+        <div>
+          ${content}
+        </div>
+    </div>
+    </body>
+</html>`
+;
 var config={
     user:"anonymous6767",
     database:"anonymous6767",
