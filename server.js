@@ -4,7 +4,7 @@ var path = require('path');
 var Pool=require('pg').Pool;
 var app = express();
 var articles={
- articleOne:{
+' aticle-one':{
   title:' Article One | Pramit',
   heading:' Article One',
   date:'Sept 24,2016',
@@ -28,7 +28,7 @@ var articles={
 .
             </p>`
  },
- articleTwo:{
+ 'article-two':{
   title:'Article two',
   date:'Sept 24,2016',
   heading:'Article Two',
@@ -39,7 +39,7 @@ var articles={
         `
       },
      
-articleThree:{
+'aticle-three':{
         title:'article three',
         date:'Sept 24,2016',
         heading:'Article Three',
@@ -101,13 +101,7 @@ app.get('/', function (req, res) {
 app.get('/aticlename',function(req,res){
     res.send(createTemplate(articles[articleName]));
 });
-app.get('/aticle-two',function(req,res){
-     res.sendFile(path.join(__dirname, 'ui', 'aticle-two.html'));
-   
-});
-app.get('/aticle-three',function(req,res){
-    res.sendFile(path.join(__dirname, 'ui', 'aticle-three.html'));
-});
+
 var counter=0;
 app.get('/counter',function(req,res){
     counter=counter+1;
