@@ -99,8 +99,8 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 app.get('/aticleName',function(req,res){
-    var aticlename=req.params.aticlename;
-    res.send(createTemplate(aticles[aticlename]));
+    var aticleName=req.params.aticleName;
+    res.send(createTemplate(aticles[aticleName]));
 });
 
 var counter=0;
