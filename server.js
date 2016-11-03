@@ -140,7 +140,7 @@ app.get('/aticles/:aticleName',function(req,res){
 
 var names=[];
 app.get('/submit-name/:name', function (req, res) {
-    var name=req.params.name;
+    var name=req.query.name;
     
     
     names.push(name);
