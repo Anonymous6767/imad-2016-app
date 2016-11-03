@@ -47,4 +47,9 @@ submit.onclick=function(){
          request.open('GET','http://anonymous6767.imad.hasura-app.io/submit-name?name=' +name,true); 
             request.send(null);
 };
-
+var submit1=document.getElementById('submit_btn1');
+var commentInput=document.getElementById('comment');
+var comment=commentInput.value;
+submit1.onclick=function(){
+    
+};
