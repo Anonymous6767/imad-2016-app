@@ -22,7 +22,7 @@ button.onclick=function(){
 };
 
 var nameInput=document.getElementById('name');
-var name1=nameInput.value;
+var name=nameInput.value;
 var submit=document.getElementById('submit_btn');
 submit.onclick=function(){
      var request=new XMLHttpRequest();
@@ -42,7 +42,7 @@ submit.onclick=function(){
             }
         }
        };
-         request.open('GET','http://anonymous6767.imad.hasura-app.io/counter',true); 
+         request.open('GET','http://anonymous6767.imad.hasura-app.io/submit-name?name='+name,true); 
     request.send(null);
 };
 
