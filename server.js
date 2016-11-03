@@ -122,6 +122,16 @@ app.get('/submit-name/:name', function (req, res) {
     res.send(JSON.stringify(names));
 
 });
+var names1=[];
+app.get('/comments/:comment', function (req, res) {
+    var name=req.query.name;
+    
+    
+    names1.push(name);
+    res.send(JSON.stringify(names1));
+
+});
+
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
