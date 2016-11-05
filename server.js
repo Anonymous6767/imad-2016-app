@@ -228,6 +228,15 @@ app.post('/login',function(req,res){
    });
 });
 //
+app.get('/check-log-in',function(req,res){
+    if(req.session && req.session.auth && req.session.auth.userId){
+        res.send('You are logged in :' +req.session.auth.userId.toString());
+    }
+    else{
+        res.send('You are not logged in');
+    }
+});
+//
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
