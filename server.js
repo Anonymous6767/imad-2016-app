@@ -138,7 +138,7 @@ app.get('/', function (req, res) {
 });
 app.get('/articles/:articleName',function(req,res){
    
-    pool.query("SELECT * FROM aticle WHERE title= ' "+ req.params.aticleName + "'", function(err,result){
+    pool.query("SELECT * FROM article WHERE title= ' "+ req.params.articleName + "'", function(err,result){
        if(err){
            res.status(500).send(err.toString());
        } 
