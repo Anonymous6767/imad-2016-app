@@ -211,6 +211,10 @@ app.post('/login',function(req,res){
                var salt=dbString.split('$')[2];
                var hashedPassword=hash(password,salt);
                if(hashedPassword===dbString){
+                   //Set the Session
+                   req.session.auth={userId: results.rows[0].id};
+                   //auth is a key
+                   
                     res.send('Succesfully logged in');
                }
                else
