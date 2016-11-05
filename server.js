@@ -4,7 +4,7 @@ var path = require('path');
 var Pool=require('pg').Pool;
 var app = express();
 var aticles={
-'aticle-one':{
+'article-one':{
   title:' Article One | Pramit',
   heading:' Article One',
   date:'Sept 24,2016',
@@ -28,7 +28,7 @@ var aticles={
 .
             </p>`
  },
- 'aticle-two':{
+ 'article-two':{
   title:'Article two',
   date:'Sept 24,2016',
   heading:'Article Two',
@@ -39,7 +39,7 @@ var aticles={
         `
       },
      
-'aticle-three':{
+'article-three':{
         title:'article three',
         date:'Sept 24,2016',
         heading:'Article Three',
