@@ -55,23 +55,23 @@ var submit1=document.getElementById('submit_btn1');
 var comment=commentInput.value;
 
 submit1.onclick=function(){
-   //   var request=new XMLHttpRequest();
-    //   request.onreadystatechange=function(){
-     //   if (request.readyState===XMLHttpRequest.DONE){
-       //     if(request.status===200){
+      var request=new XMLHttpRequest();
+       request.onreadystatechange=function(){
+        if (request.readyState===XMLHttpRequest.DONE){
+            if(request.status===200){
     
                 var names=['name1','name2','name 3'];
-              //  names=JSON.parse(names);
+                names=JSON.parse(names);
               var list='';
                  for(var i=0;i<names.length;i++){
                     list+='<li>'+names[i]+'</li>';
  }
   var ul=document.getElementById('commentlist');
   ul.innerHTML=list;
-          //  }
-    //    }
-   //    };
+            }
+      }
+       };
    
-   //  request.open('GET','http://anonymous6767.imad.hasura-app.io/comments?comment=' +comment,true); 
-     //       request.send(null);
+     request.open('GET','http://anonymous6767.imad.hasura-app.io/comments?comment=' +comment,true); 
+            request.send(null);
 };
