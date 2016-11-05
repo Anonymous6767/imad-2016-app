@@ -105,6 +105,6 @@ submit1.onclick=function(){
          console.log('username');
          console.log('password');
    
-     request.open('POST','http://anonymous6767.imad.hasura-app.io/login' +comment,true); 
+     request.open('POST','http://anonymous6767.imad.hasura-app.io/login' ,true); 
             request.send(JSON.stringify({username:username,password:password}));
 };
