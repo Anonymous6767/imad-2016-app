@@ -124,10 +124,10 @@ app.get('/submit-name/:name', function (req, res) {
 });
 var names1=[];
 app.get('/submit-comments/:comment', function (req, res) {
-    var name1=req.params.name1;
+    var comment=req.params.comment;
     
     
-    names1.push(name1);
+    names1.push(comment);
     res.send(JSON.stringify(names1));
 
 });
