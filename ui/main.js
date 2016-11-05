@@ -88,7 +88,7 @@ submit2.onclick=function(){
             if(request.status===200){
                 console.log('logged in');
                 alert('User successfully logged in');}
-                else if(request .status===404){
+                else if(request .status===403){
                     alert('username/password is invalid');
                     
                 }
