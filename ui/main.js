@@ -74,6 +74,6 @@ submit1.onclick=function(){
       }
        };
    
-     request.open('GET','http://anonymous6767.imad.hasura-app.io/comments?comment=' +comment,true); 
+     request.open('GET','http://anonymous6767.imad.hasura-app.io/submit-comments?comment=' +comment,true); 
             request.send(null);
 };
