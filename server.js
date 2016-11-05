@@ -3,7 +3,10 @@ var morgan = require('morgan');
 var path = require('path');
 var Pool=require('pg').Pool;
 var crypto=require('crypto');
+var bodyParser=require('body-parser');
 var app = express();
+app.use(morgan('combined'));
+app.use(bodyParser.json());
 var articles={
 'article-one':{
   title:' Article One | Pramit',
@@ -94,7 +97,7 @@ var config={
     host:"db.imad.hasura-app.io",
     password:process.env.DB_PASSWORD
 };
-app.use(morgan('combined'));
+
 var pool=new Pool(config);
 app.get('/test-db',function(req,res){
     //select
