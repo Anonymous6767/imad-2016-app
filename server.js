@@ -123,8 +123,8 @@ app.get('/submit-name', function (req, res) {
 
 });
 var names1=[];
-app.get('/submit-comments/:comment', function (req, res) {
-    var comment=req.params.comment;
+app.get('/submit-comments', function (req, res) {
+    var comment=req.query.comment;
     
     
     names1.push(comment);
