@@ -67,6 +67,6 @@ submit1.onclick=function(){
        };
        var commentInput=document.getElementById('comment');
 var comment=commentInput.value;
-     request.open('GET','http://anonymous6767.imad.hasura-app.io/comments?comment=' +name,true); 
+     request.open('GET','http://anonymous6767.imad.hasura-app.io/comments?comment=' +comment,true); 
             request.send(null);
 };
