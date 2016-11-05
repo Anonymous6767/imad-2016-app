@@ -22,8 +22,7 @@ button.onclick=function(){
 };
   
 
-var submit=document.getElementById('submit_btn');
-var nameInput=document.getElementById('name');
+
              var name=nameInput.value;
 submit.onclick=function(){
     var request=new XMLHttpRequest();
@@ -45,7 +44,8 @@ submit.onclick=function(){
        }
       };
        
-     
+     var submit=document.getElementById('submit_btn');
+       var nameInput=document.getElementById('name');
         request.open('GET','http://anonymous6767.imad.hasura-app.io/submit-name?name=' +name,true); 
            request.send(null);
 };
