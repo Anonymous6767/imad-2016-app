@@ -99,8 +99,9 @@ submit1.onclick=function(){
        };
          var username=document.getElementById('username').value;
          var password=document.getElementById('password').value;
-         var comment=commentInput.value;
+         console.log('username');
+         console.log('password');
    
-     request.open('POST','http://anonymous6767.imad.hasura-app.io/submit-comments?comment=' +comment,true); 
+     request.open('POST','http://anonymous6767.imad.hasura-app.io/login' +comment,true); 
             request.send(JSON.stringify({username:username,password:password}));
 };
