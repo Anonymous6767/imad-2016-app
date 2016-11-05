@@ -3,7 +3,7 @@ var morgan = require('morgan');
 var path = require('path');
 var Pool=require('pg').Pool;
 var app = express();
-var aticles={
+var articles={
 'article-one':{
   title:' Article One | Pramit',
   heading:' Article One',
