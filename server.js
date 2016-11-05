@@ -75,7 +75,7 @@ var htmltemplate=`<html>
             </h3>
         </div>
         <div>
-            ${date.toString()}
+            ${date.toDateString()}
         </div>
         <div>
           ${content}
