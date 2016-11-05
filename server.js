@@ -123,7 +123,7 @@ app.get('/submit-name/:name', function (req, res) {
 
 });
 var names1=[];
-app.get('/comments/:comment', function (req, res) {
+app.get('/submit-comments/:comment', function (req, res) {
     var name1=req.params.name1;
     
     
