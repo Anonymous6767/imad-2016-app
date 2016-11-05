@@ -81,7 +81,7 @@ submit1.onclick=function(){
 };
 //login
 var submit2=document.getElementById('submit_btnnn');
-submit1.onclick=function(){
+submit2.onclick=function(){
   var request=new XMLHttpRequest();
        request.onreadystatechange=function(){
         if (request.readyState===XMLHttpRequest.DONE){
