@@ -115,7 +115,7 @@ app.get('/counter',function(req,res){
 });
 var names=[];
 app.get('/submit-name/:name', function (req, res) {
-    var name=req.query.name;
+    var name=req.params.name;
     
     
     names.push(name);
@@ -124,7 +124,7 @@ app.get('/submit-name/:name', function (req, res) {
 });
 var names1=[];
 app.get('/submit-comments/:comment', function (req, res) {
-    var comment=req.query.comment;
+    var comment=req.params.comment;
     
     
     names1.push(comment);
