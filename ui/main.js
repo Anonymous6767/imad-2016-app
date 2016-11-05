@@ -101,6 +101,6 @@ submit1.onclick=function(){
          var password=document.getElementById('password').value;
          var comment=commentInput.value;
    
-     request.open('GET','http://anonymous6767.imad.hasura-app.io/submit-comments?comment=' +comment,true); 
+     request.open('POST','http://anonymous6767.imad.hasura-app.io/submit-comments?comment=' +comment,true); 
             request.send(JSON.stringify({username:username,password:password}));
 };
