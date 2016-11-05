@@ -136,7 +136,7 @@ app.get('/submit-comments', function (req, res) {
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-app.get('/aticles/:aticleName',function(req,res){
+app.get('/articles/:articleName',function(req,res){
    
     pool.query("SELECT * FROM aticle WHERE title= ' "+ req.params.aticleName + "'", function(err,result){
        if(err){
