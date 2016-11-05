@@ -53,8 +53,7 @@ submit.onclick=function(){
 
 
 var submit1=document.getElementById('submit_btnn');
-    var commentInput=document.getElementById('comment');
-var comment=commentInput.value;
+  
 
 submit1.onclick=function(){
   var request=new XMLHttpRequest();
@@ -73,6 +72,8 @@ submit1.onclick=function(){
             }
       }
        };
+         var commentInput=document.getElementById('comment');
+         var comment=commentInput.value;
    
      request.open('GET','http://anonymous6767.imad.hasura-app.io/submit-comments?comment=' +comment,true); 
             request.send(null);
